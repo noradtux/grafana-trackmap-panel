@@ -23,7 +23,7 @@ export class TrackMapCtrl extends MetricsPanelCtrl {
       maxDataPoints: 500,
       autoZoom: true,
       scrollWheelZoom: false,
-      defaultLayer: 'OpenStreetMap',
+      defaultLayer: 'TopoLEMNET',
       showLayerChanger: true,
       lineColor: 'red',
       pointColor: 'royalblue',
@@ -37,6 +37,10 @@ export class TrackMapCtrl extends MetricsPanelCtrl {
       }),
       'OpenTopoMap': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+        maxZoom: 17
+      }),
+      'TopoLEMNET': L.tileLayer('https://lemnet.org/tiles3/{z}/{x}/{y}.png', {
+        attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://lemnet.org">LEMNET</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
         maxZoom: 17
       }),
       'Satellite': L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
